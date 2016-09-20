@@ -1,0 +1,59 @@
+[% USE Animal %]
+[% USE Date %]
+[% start = q.param('start') %]
+[% IF NOT start %][% start = 0 %][% END %]
+
+[% pagesize = 5 %]
+
+<html>
+  <head>
+    <title>animal.pl - thanks</title>
+    <link type="text/css" rel="stylesheet" href="/animal.css">
+  </head>
+  <body>
+    <table width="100%" border="1" cellpadding="5" cellspacing="0"><tr>
+    <td valign="top">
+      <img src="foo.gif" width="150" height="1"><br />
+      thank you for your participation! <br /><br />
+
+      [% IF NOT proprietry %]
+        animal.pl is now exposed!  you can read a full and frank <a
+        href="expose.html">explanation</a> about the hidden process
+        behind this experiment, and download my sourcecode.<br /><br />
+      [% END %]
+
+      feel free to return to this page later to check for new entries, but
+      please only link to the <a href="/">front page</a>.
+    </td>
+    <td bgcolor="#d0d0d0" valign="top" width="500">
+    <table width="100%" border="1" cellpadding="5" cellspacing="0"><tr><th>past contributions
+    </th></tr></table><br />
+    [% IF start > 0 %]
+      [% newstart = start - pagesize %]
+      [% IF newstart < 0 %][% newstart = 0 %][% END %]
+      <a href="thanks.html?start=[% newstart %]">newer</a>
+    [% END %]
+    [% foo = pagesize + 1 %]
+    [% FOREACH answer = Animal.answers(start, foo) %]
+    <table width="100%" border="1" cellpadding="5" cellspacing="0"><tr><td>
+      <font class="answer">
+      [% FILTER html_break %][% answer.answer %][% END %]
+      <br />
+      [<b>[% FILTER lower %][% IF answer.url %]<a href="[% 'http://' IF NOT answer.url.match('^\w+:') %][% answer.url %]" target="other">[% END %][% IF answer.name.length >= 1 %][% answer.name %][% ELSE %]anonymous[% END %][% IF answer.url %]</a>[% END %][% IF answer.location %], [% answer.location %][% END %][% END %], [% Date.format(answer.date, "%H:%M %d %b %Y") %]</b>]
+      <br />
+[% IF answer.date < 1032045579 %]
+<i>(this answer was given during the test phase of this experiment)</i>
+<br />
+[% END %]
+    </font>
+    </td></tr></table>
+    <br />
+    [% IF NOT loop.last AND loop.count == pagesize %]
+      [% newstart = start + pagesize %]
+      <a href="thanks.html?start=[% newstart %]">older</a>
+      [% LAST %]
+    [% END %]
+    [% END %]
+    </td></tr></table>
+  </body>
+</html>

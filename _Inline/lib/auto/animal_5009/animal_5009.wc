@@ -1,0 +1,148 @@
+#!/usr/bin/perl -w
+# !!! DO NOT EDIT !!!
+# This program was automatically generated from '[unknown]' by animal.pl
+
+use strict;
+
+use URI ();
+use HTTP::Request ();
+use LWP::UserAgent ();
+#use LWP::Debug qw(+);
+
+use HTML::Form ();
+use WWW::Chat;
+
+use vars qw($ua $uri $base $req $res $status $ct @forms $form @links $TRACE);
+
+$base ||= "http://localhost";
+unless ($ua) {
+    $ua  = LWP::UserAgent->new;
+    $ua->agent("webchat/0.61 " . $ua->agent);
+    $ua->env_proxy;
+}
+
+$TRACE = $ENV{WEBCHAT_TRACE};
+
+#line 1 "[unknown]"
+
+sub submit_to_slashdot {
+    my $self = shift;
+    my $page;
+
+    #GET "http://slashdot.org/submit.pl"
+    eval {
+        local $uri = URI->new_abs("http://slashdot.org/submit.pl", $base);
+        local $req = HTTP::Request->new(GET => $uri);
+        local $res = WWW::Chat::request($req, $ua, $TRACE);
+        #print STDERR $res->as_string;
+        local $status = $res->code;
+        local $base = $res->base;
+        local $ct = $res->content_type || "";
+        local $_ = $res->content;
+        local(@forms, $form, @links);
+        if ($ct eq 'text/html') {
+            @forms = HTML::Form->parse($_, $res->base);
+            $form = $forms[0] if @forms;
+            @links = WWW::Chat::extract_links($_);
+        }
+#line 7 "[unknown]"
+    WWW::Chat::fail("OK", $res, $ct) unless WWW::Chat::OK($status);
+      $form = WWW::Chat::findform(\@forms, 2, undef);
+      $form->value("email" => "'alex-slashdot\@slab.org';");
+      $form->value("story" => "\$self->template('slashdot/story');");
+      $form->value("subj" => "'Arbitrary book excerpts';");
+      #CLICK undef 1 1
+      eval {
+          local $uri = $form->uri;
+          local $req = $form->click(undef, 1, 1);
+          local $res = WWW::Chat::request($req, $ua, $TRACE);
+          #print STDERR $res->as_string;
+          local $status = $res->code;
+          local $base = $res->base;
+          local $ct = $res->content_type || "";
+          local $_ = $res->content;
+          local(@forms, $form, @links);
+          if ($ct eq 'text/html') {
+              @forms = HTML::Form->parse($_, $res->base);
+              $form = $forms[0] if @forms;
+              @links = WWW::Chat::extract_links($_);
+          }
+#line 13 "[unknown]"
+       $form = WWW::Chat::findform(\@forms, 2, undef);
+       $form->value("op" => "SubmitStory");
+       #CLICK undef 1 1
+       eval {
+           local $uri = $form->uri;
+           local $req = $form->click(undef, 1, 1);
+           local $res = WWW::Chat::request($req, $ua, $TRACE);
+           #print STDERR $res->as_string;
+           local $status = $res->code;
+           local $base = $res->base;
+           local $ct = $res->content_type || "";
+           local $_ = $res->content;
+           local(@forms, $form, @links);
+           if ($ct eq 'text/html') {
+               @forms = HTML::Form->parse($_, $res->base);
+               $form = $forms[0] if @forms;
+               @links = WWW::Chat::extract_links($_);
+           }
+#line 16 "[unknown]"
+         $page = $_;
+       }; WWW::Chat::check_eval($@);
+      }; WWW::Chat::check_eval($@);
+    }; WWW::Chat::check_eval($@);
+    return $page;
+}
+
+##
+
+sub submit_to_boingboing {
+    my $self = shift;
+    my $page;
+
+    #GET "http://boingboing.net/suggest.html"
+    eval {
+        local $uri = URI->new_abs("http://boingboing.net/suggest.html", $base);
+        local $req = HTTP::Request->new(GET => $uri);
+        local $res = WWW::Chat::request($req, $ua, $TRACE);
+        #print STDERR $res->as_string;
+        local $status = $res->code;
+        local $base = $res->base;
+        local $ct = $res->content_type || "";
+        local $_ = $res->content;
+        local(@forms, $form, @links);
+        if ($ct eq 'text/html') {
+            @forms = HTML::Form->parse($_, $res->base);
+            $form = $forms[0] if @forms;
+            @links = WWW::Chat::extract_links($_);
+        }
+#line 30 "[unknown]"
+    WWW::Chat::fail("OK", $res, $ct) unless WWW::Chat::OK($status);
+      $form = WWW::Chat::findform(\@forms, 1, undef);
+      $form->value("email_name" => "'alex';");
+      $form->value("email_from" => "'alex-boingboing\@slab.org';");
+      $form->value("from_url" => "'http://slab.org';");
+      $form->value("subject" => "'Book excerpts';");
+      $form->value("suggested_url" => "\$self->url;");
+      $form->value("description" => "\$self->template('boingboing/story');");
+      #CLICK undef 1 1
+      eval {
+          local $uri = $form->uri;
+          local $req = $form->click(undef, 1, 1);
+          local $res = WWW::Chat::request($req, $ua, $TRACE);
+          #print STDERR $res->as_string;
+          local $status = $res->code;
+          local $base = $res->base;
+          local $ct = $res->content_type || "";
+          local $_ = $res->content;
+          local(@forms, $form, @links);
+          if ($ct eq 'text/html') {
+              @forms = HTML::Form->parse($_, $res->base);
+              $form = $forms[0] if @forms;
+              @links = WWW::Chat::extract_links($_);
+          }
+#line 39 "[unknown]"
+    }; WWW::Chat::check_eval($@);
+    return $page;
+}
+}; WWW::Chat::check_eval($@);

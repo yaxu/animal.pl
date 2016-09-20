@@ -1,0 +1,12 @@
+  <html>
+    <head>
+      <title>directory of [% name %]</title>
+    </head>
+    <body bgcolor="#ffffff">
+      <b>directory of [% name %]</b>: <br /><br />
+      [% FOREACH file = files.keys.sort %]
+	[% type = files.$file %]
+	<a href="[% file %][% '/' IF type == 'directory' %]">[% file %][% '/' IF type == 'directory' %]</a> ([% type %])<br />
+      [% END %]
+    </body>
+  </html>

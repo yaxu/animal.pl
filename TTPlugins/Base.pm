@@ -1,0 +1,40 @@
+package TTPlugins::Base;
+
+use strict;
+
+use Template::Plugin;
+use base qw( Template::Plugin );
+
+sub new {
+    my ($class, $context, @params) = @_;
+
+    return $class->error("no context passed to $class constructor\n")
+        unless defined $context;
+
+    bless {
+        _CONTEXT  => $context, 
+        _PARAMS   => \@params,
+    }, $class;
+}
+
+##
+
+sub context  { $_[0]->{_CONTEXT}  }
+
+##
+
+sub params   { $_[0]->{_PARAMS}   }
+
+##
+
+sub dbh {
+    $_[0]->stash->{dbh};
+}
+
+sub stash {
+    $_[0]->context->stash;
+}
+
+##
+
+1;

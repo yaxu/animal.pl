@@ -1,0 +1,10 @@
+Subject: excerpt database
+
+hello [% name %],
+
+here's a thing:
+
+ [% url %]
+
+
+alex

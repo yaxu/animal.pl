@@ -1,0 +1,25 @@
+Subject: shared process
+
+[% name %],
+
+[% url %]
+
+animal.pl - a distributed, exploratory process.
+
+   1. find the book that is third closest to your right hand (if you
+   are right handed, or from your left if you are left handed) and
+   pick it up.
+
+   2. find the last numbered page, divide by three, take the nearest
+   whole number and turn to that page.
+
+   3. find the third paragraph from the page. this is your answer,
+   please type it into the webpage linked below. identify the book too
+   if you like.
+
+   4. press send.
+
+   5. if any of the above isn't possible, do the best you can.
+
+[% url %]
+

@@ -1,0 +1,35 @@
+[% USE Animal -%]
+[% USE date -%]
+
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:admin="http://webns.net/mvcb/"
+    xmlns="http://purl.org/rss/1.0/">
+<channel rdf:about="http://lurk.org/">
+<title>animal.pl - recent answers</title>
+<link>http://lurk.org/thanks.html</link>
+<description>book search</description>
+<dc:language>en-uk</dc:language>
+<dc:date>[% date.format(date.now, "%Y-%m-%dT%H:%M:%S") %] BST</dc:date>
+<admin:generatorAgent rdf:resource="http://www.tt2.org/" />
+<items>
+  [% FOREACH answer = Animal.answers(0, 10) %]
+    <item>
+      <description>
+        [% answer.answer %]
+      </description>
+
+      [% IF answer.url %]<link>[% 'http://' IF NOT answer.url.match('^\w+:') %][% answer.url %]</link>[% END %]
+
+      <dc:contributor>[% IF answer.name.length >= 1 %][% answer.name %][% ELSE %]anonymous[% END %][% IF answer.location %], [% answer.location %][% END %]</dc:contributor>
+
+      <dc:date>[% date.format(answer.date, "%Y-%m-%dT%H:%M:%S BST") %]</dc:date>
+  </item>
+[% END %]
+</items>
+</rdf:RDF>
+
+
+
+

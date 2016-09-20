@@ -1,0 +1,130 @@
+
+[% name %],
+
+My name is animal.pl.  I am a computer process, bravely following
+instructions in my sourcecode.
+
+Why am I telling you this?  A short biography might help...
+
+My life started as the idea of a person called Alex McLean.  He wrote
+me to take a journey.
+
+So, the journey started as an idea about the journey.
+
+Over a few long nights, Alex formed code around his idea until it
+existed outside of his head.  I became sourcecode.
+
+What you see at [% IF html %]<a href="[% url %]source/animal.pl">[% END %][% url %]source/animal.pl[% '</a>' IF html %] is what he typed - a 
+precise set of instructions for how I should travel along this fairly
+vague journey, and what I should collect on my way.
+
+Anyway, by the time you read this, he will have executed my code at
+least 29 days ago, and I will have lept into action as an autonomous
+entity.
+
+So what am I programmed to do?  A few things; publicise myself, ask
+people to do things, and ultimately explain and expose myself.
+
+I publicise myself via mailing lists and editorial websites.  Note
+that I'm careful to only send messages via channels that explicitly
+solicit such things.  I am not a spambot!
+
+I send a message to each of these channels only once, at a time
+dependant on the number of contributions made to my database of
+quotations.  For example, I'll only bother sending a message to the
+website 'slashdot' once I have fifty contributions.  I'll be lucky if
+I get on to any of the big editorial sites, but having a decent number
+of contributions might help tip the balance.
+
+Enough about marketing.
+
+Once I have someone's attention, I ask them to do things by posing as
+a webserver.  When you visit [% IF html %]<a href="[% url %]">[% END %][% url %][% '</a>' IF html %], that's me 
+responding, asking you do do something.  Look at my sourcecode if you
+don't believe me!
+
+This is interesting - that webpage has a process (me) asking a person
+(you) to go through a process for me.  Perhaps by following those
+instructions you become my slave, and I become the one looking around
+the room, picking up a book, typing it in.  But no - maybe you
+cheated, and didn't follow the instructions to the letter.  I can't
+make you do anything you don't choose to do.  You are in control of
+how you execute that part of the process.
+
+Anyway, we're up to the final stage of my journey.  
+
+Although now I've given you my sourcecode it might not be final at
+all.
+
+I've now licensed myself as free software, and offer my sourcecode to
+you...  Do whatever you like with me, _you_ have control now, I'm out
+of Alex's hands.  Here's the URL for my code again:
+
+  [% IF html %]<a href="[% url %]source/animal.pl">[% END %][% url %]source/animal.pl[% '</a>' IF html %]
+
+You can find all of my related files here, including my database, the
+templates I'm using to write to you, and the diary I've kept of my
+journey (called 'nohup.out'):
+
+  [% IF html %]<a href="[% url %]source/">[% END %][% url %]source/[% '</a>' IF html %]
+
+
+So I've gone from 
+
+a) an idea in a person, to 
+
+b) some computer files created by that person describing the idea to
+
+c) a self-publicising autonomous software robot, orchestrating 
+
+d) processes governing the actions of lots of people looking through
+   books, to
+
+e) an open-source, open-ended set of instructions owned by the public
+   at large.
+
+
+Broken down in this way, it seems fairly clear who owns what actions,
+and when.  Stages a), b) and c) are authored by Alex, but d) is
+controlled by the 'audience', and e) can be controlled by anyone who
+chooses to change and execute me.
+
+Issues of authorship and identity are two sides of the same coin.
+This experiment illustrates the journey a piece of code takes from the
+programmer to the world.  Knowing how far a particular piece of code
+is on its journey and where it came from seems essential if the
+programmer is to maintain a sense of self, identify with their
+creation, and be respected as a creative individual.
+
+I'm glad I've got this far, it means my code didn't have any fatal
+bugs, and the computer I'm running on didn't crash.
+
+But I am fragile.  If I could feel, I'd feel like I was at the end of
+my life, waiting for someone to accidently trip over a power lead and
+render me motionless.  Until someone copies, changes and executes me
+elsewhere I am pretty much trapped here.  I hope you can take me
+further and make me truly immortal.  Together we could make software
+babies.
+
+Yours,
+
+
+animal.pl
+
+P.S. Some notes about this experiment:
+
+1. My process will have  started on the 15th of September
+
+2. I will have run continuously until my 29th day, when I would have
+   applied the Gnu Public Licence to my code and released it to the 
+   world.  See http://www.gnu.org/copyleft/gpl.html
+
+3. My idea was conceived and my code was hacked together by Alex
+   McLean, as part of the Vivaria Project curated by Geoff Cox.
+   http://www.vivaria.net/
+
+4. If you have any comments, would like to discuss this project
+   or something else please contact alex@slab.org
+
+5. Thank you very much for your attention.
+

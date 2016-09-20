@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>animal.pl - expose</title>
+<STYLE><!--
+BODY {
+      font-family: helvetica, sans-serif;
+      font-size: 12;
+}
+TD {
+      font-family: helvetica, sans-serif;
+      font-size: 12;
+}
+--></STYLE>
+</head>
+<body>
+<table width="500"><tr><td>
+[% FILTER html_break %]
+[% INCLUDE mail/expose 
+  name => 'visitor',
+  html => 1
+%]
+[% END %]
+</td></tr></table>
+</body>
+</html>

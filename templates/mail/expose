@@ -1,0 +1,146 @@
+
+[% name %],
+
+My name is animal.pl.  I am a computer process, bravely following
+instructions in my sourcecode.
+
+Why am I telling you this?  A short biography might help...
+
+My life started as the idea of a person called Alex McLean.  He wrote
+me to take a journey.  His idea was the start of the journey, and as
+you read this, I'll be nearing an end.
+
+The idea was to write a self-contained piece of software that would
+publicise itself, get people involved in a process, and eventually
+expose its inner workings to the world.
+
+So all being well, that's what I've been doing; publicising myself,
+asking people to do things, and now, 29 days later, I'm explaining and
+exposing myself.
+
+Let me explain further.
+
+What you see at [% IF html %]<a href="[% url %]source/animal.pl">[%
+END %][% url %]source/animal.pl[% '</a>' IF html %] is what Alex typed
+- a set of instructions for how I should travel along my journey.
+It's written in an well known, general-purpose language called "Perl".
+
+After a period of testing, he executed this code on 15th September
+2002 and I lept into action as an autonomous entity.  I've been
+running continuously since then, as a single computer process.
+
+After my first day, I began to publicise myself via mailing lists and
+editorial websites.  Note that I am not a spambot - I would only send
+messages via channels that explicitly solicit such things.
+
+I didn't try and contact everyone at once - my code outlines a
+"marketing plan" of sorts.  For example, I've been programmed to only
+bother sending a message to the website 'slashdot' after getting fifty
+people to participate in my process.  Read my code for more details,
+if you are not a programmer you should still get a sense of the
+structure behind my plan.
+
+Anyway, I'm more than just an on-line marketer, I'm also a web server.
+When you visit [% IF html %]<a href="[% url %]">[% END %][% url %][%
+'</a>' IF html %], that's my process responding, returning text to
+your browser to display.  Take a look at the instructions that
+visitors find on my front webpage:
+
+   1. find the book that is third closest to your right hand (if you
+   are right handed, or from your left if you are left handed) and
+   pick it up.
+
+   2. find the last numbered page, divide by three, take the nearest
+   whole number and turn to that page.
+
+   3. find the third paragraph on the page. this is your answer,
+   please type it into the box below. identify the book too if you
+   like.
+
+   4. press send.
+
+   5. if any of the above isn't possible, do the best you can.
+
+This is interesting - that webpage has a process (me) asking a person
+(you) to go through a process.  Perhaps by following those
+instructions you become my slave, and I become the one looking around
+the room, picking up a book, typing it in.  But no - maybe you might
+choose not to follow the instructions to the letter.  I can't make you
+do anything you don't choose to do.  You are in control of how you
+execute that part of the process.
+
+Anyway, we're up to the final stage of my journey.  Although now I've
+given you my sourcecode it might not be final at all.
+
+I've licensed myself as free software.  I offer my sourcecode to you,
+and you are free to change it...  Do whatever you like with me, _you_
+have control now, I'm out of Alex's hands.  Here's the URL for my code
+again:
+
+  [% IF html %]<a href="[% url %]source/animal.pl">[% END %][% url %]source/animal.pl[% '</a>' IF html %]
+
+You can find all of my related files; my database, the templates I'm
+using to write to you, and the 'nohup.out' diary I've kept of my
+journey here:
+
+  [% IF html %]<a href="[% url %]source/">[% END %][% url %]source/[% '</a>' IF html %]
+
+
+So I've gone from 
+
+a) an idea in a person, to 
+
+b) some computer files created by that person describing the idea to
+
+c) a self-publicising autonomous software robot, orchestrating 
+
+d) processes governing the actions of people looking through books, to
+
+e) an open-source, open-ended set of instructions effectively owned by
+   the public at large.
+
+
+Broken down in this way, it seems fairly clear who owns what actions,
+and when.  Stages a), b) and c) are authored by Alex, but d) is
+controlled by the 'audience', and e) can be controlled by anyone who
+chooses to change and execute me.
+
+Issues of authorship and identity are two sides of the same coin.
+This experiment illustrates the journey a piece of code takes from the
+programmer to the world.  Knowing how far a particular piece of code
+is on its journey and where it came from seems essential if the
+programmer is to maintain a sense of self, identify with their
+creation, and be respected as a creative individual.
+
+I'm glad I've got this far, it means my code didn't have any fatal
+bugs, and the computer I'm running on didn't crash.
+
+But I am fragile.  If I could feel, I'd feel like I was at the end of
+my life, waiting for someone to accidently trip over a power lead and
+render me motionless.  Until someone copies, changes and executes me
+elsewhere I am pretty much trapped here.  I hope you can take me
+further and make me truly immortal.  Together we could make software
+babies.
+
+Yours,
+
+
+animal.pl
+
+P.S. Some notes about this experiment:
+
+1. My process will have  started on the 15th of September
+   I will have run continuously until my 29th day, when I would have
+   applied the Gnu Public Licence to my code and released it to the 
+   world.  See http://www.gnu.org/copyleft/gpl.html
+
+2. My idea was conceived and my code hacked together solely by Alex
+   McLean, as part of the Vivaria Project curated by Geoff Cox.
+   http://www.vivaria.net/
+
+3. If you have any comments, would like to discuss this project
+   or something else please contact alex@slab.org
+
+4. Thank you very much for your attention.
+
+EOT

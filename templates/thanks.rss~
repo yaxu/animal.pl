@@ -1,0 +1,13 @@
+[% USE Animal %]
+[% USE Date %]
+
+[% FOREACH answer = Animal.answers(0, 8) %]
+  [% answer.answer %]
+  [% IF answer.url %][% 'http://' IF NOT answer.url.match('^\w+:') %][% answer.url %][% END %]
+
+  [% IF answer.name.length >= 1 %][% answer.name %][% ELSE %]anonymous[% END %]
+
+  [% IF answer.location %][% answer.location %][% END %]
+  [% Date.format(answer.date, "%H:%M %d %b %Y") %]
+[% END %]
+
